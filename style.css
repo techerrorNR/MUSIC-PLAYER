@@ -1,0 +1,133 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#musicPlayer {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+#playerControls, #songInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#albumArt {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#songDetails p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+#progressBar {
+    width: calc(100% - 40px); /* Adjusted width */
+    margin: 20px 0;
+}
+
+button {
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 8px;
+    transition: background-color 0.3s ease;
+    background-color: #2196F3;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #1769aa;
+}
+
+#shuffleBtn, #repeatBtn {
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+#shuffleBtn:hover, #repeatBtn:hover {
+    color: #4CAF50;
+}
+
+input[type="range"] {
+    width: calc(100% - 40px); /* Adjusted width */
+    margin: 20px 0;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 3px #000000;
+    background: #ddd;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 5px #000000;
+    border: 1px solid #000000;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -6px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+#musicListContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: calc(100% - 40px); /* Adjusted height */
+    background-color: #f9f9f9;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+#musicList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#musicList li {
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#musicList li:hover {
+    background-color: #e5e5e5;
+}
